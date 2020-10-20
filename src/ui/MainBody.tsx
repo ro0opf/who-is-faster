@@ -4,13 +4,14 @@ import ButtonBigRounded from '../components/ButtonBigRounded';
 
 type bodyProps = {
     height : string,
+    btnGameStartOnClick : React.MouseEventHandler<HTMLButtonElement>
 }
 
 
-function MainBody({height} : bodyProps) {
+function MainBody({height, btnGameStartOnClick} : bodyProps) {
     return (
         <Wrapper height={height}>
-            <ButtonBigRounded name="Game Start"></ButtonBigRounded>
+            <ButtonBigRounded name="Game Start" onClick={btnGameStartOnClick}/>
         </Wrapper>
     )
 }

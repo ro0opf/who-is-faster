@@ -22,9 +22,9 @@ function MainIp({height} : bodyProps) {
 
     return (
         <Wrapper height={height}>
-            <h1>
+            <div>
                 {ip}
-            </h1>
+            </div>
         </Wrapper>
     )
 }

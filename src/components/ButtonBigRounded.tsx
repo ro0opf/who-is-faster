@@ -3,12 +3,13 @@ import {Wrapper} from './ButtonBigRounded.css';
 
 type btnProps = {
     name : string,
+    onClick : React.MouseEventHandler<HTMLButtonElement>
 }
 
-function ButtonBigRounded({name,} : btnProps) {
+function ButtonBigRounded({name, onClick} : btnProps) {
     return (
         <Wrapper>
-            <button className="btn-start">
+            <button className="btn-start" onClick={onClick}>
                 {name}
             </button>
         </Wrapper>
