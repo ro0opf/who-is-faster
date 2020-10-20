@@ -7,18 +7,22 @@ type bodyProps = {
 }
 
 function MainIp({height} : bodyProps) {
-    const [ip, setIp] = useState<string>();
+    const [ip, setIp] = useState<string>()
     
     useEffect(() =>{
-        async function fetchData(){
+        async function FetchData(){
             const result = await axios(
                 'https://api.ipify.org/?format=json'
-            );
+            )
 
-            setIp(result.data.ip);
+            setIp(result.data.ip)
         }
-        fetchData();
-    }, []);
+        FetchData()
+
+        return function CleanUp(){
+            
+        }
+    }, [])
 
     return (
         <Wrapper height={height}>
