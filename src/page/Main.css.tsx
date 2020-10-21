@@ -1,10 +1,10 @@
 import styled from "styled-components";
 
 type IProps = {
-    red : string,
-    green : string,
-    blue : string,
-    alpha : string
+    red? : string,
+    green? : string,
+    blue? : string,
+    alpha? : string
 }
 
 export const Wrapper = styled.div`
@@ -28,5 +28,10 @@ export const Wrapper = styled.div`
         text-align : center;
         vertical-align : middle;
         display : table-cell;
+    }
+
+    & .script-box {
+        will-change: width, height, left, top;
+        position: absolute;
     }
 `;

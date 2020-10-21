@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import {Wrapper} from './Main.css'
 import MainBody from '../ui/MainBody'
-import MainIp from 'ui/MainIp'
+import MainHeader from 'ui/MainHeader'
 
 const BEFORE_START = 0
 const READY_TO_START = 1
@@ -17,6 +17,7 @@ function Main() {
     const [startTime, setStartTime] = useState<number>(0)
     const [score, setScore] = useState<number>(0)
 
+
     function BtnGameStartOnClick(){
         setGameState(READY_TO_START)
     }
@@ -26,7 +27,6 @@ function Main() {
 
         useEffect(() => {
             if (!countdown){
-                setGameState(START_GAME)
                 StartGame()
                 return
             }
@@ -38,7 +38,7 @@ function Main() {
             return function CleanUp(){
                 clearInterval(intervalId)
             }
-          }, [countdown])
+        }, [countdown])
 
         return(
             <div className="div-countdown">
@@ -51,11 +51,13 @@ function Main() {
 
     function StartGame(){
         const min = 1000
-        const max = 10000
+        const max = 5000
         const gameTime = min + Math.random() * (max - min)
 
         setTimeout(()=>{
             setStartTime(new Date().getTime())
+            setGameState(START_GAME)
+            
             const min = 0
             const max = 255
             const red = min + Math.random() * (max - min)
@@ -67,7 +69,7 @@ function Main() {
             setBlue(blue.toString())
             setGreen(green.toString())
             setAlpha(alpha.toString())
-        }, gameTime);
+        }, gameTime)
     }
     
     function CatchByUser(){
@@ -80,8 +82,8 @@ function Main() {
         case BEFORE_START:
             return (
                 <Wrapper red={red} green={green} blue={blue} alpha={alpha}>
-                    <MainIp height="20%"/>
-                    <MainBody height="80%" btnGameStartOnClick={BtnGameStartOnClick}/>
+                    <MainHeader height="50%"/>
+                    <MainBody height="50%" btnGameStartOnClick={BtnGameStartOnClick}/>
                 </Wrapper>
             )
         case READY_TO_START:
@@ -97,7 +99,7 @@ function Main() {
             )
         case END_GAME:
             return(
-                <Wrapper red={red} green={green} blue={blue} alpha={alpha} onClick={()=>{console.log(score)}}>
+                <Wrapper red={red} green={green} blue={blue} alpha={alpha}>
                 </Wrapper>
             )
         default:
