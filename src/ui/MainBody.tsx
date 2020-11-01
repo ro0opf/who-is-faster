@@ -1,17 +1,76 @@
-import React from 'react';
-import {Wrapper} from './MainBody.css';
-import ButtonBigRounded from '../components/ButtonBigRounded';
+import React, { useState, useEffect } from 'react'
+import { Wrapper } from './MainBody.css'
+import { Paper, Table, TableHead, TableRow, TableCell, TableBody, Button } from '@material-ui/core'
+import User from '../components/User'
+import axios from 'axios'
 
-type bodyProps = {
-    height : string,
-    btnGameStartOnClick : React.MouseEventHandler<HTMLButtonElement>
+type IProps = {
+    height: string,
+    btnGameStartOnClick: React.MouseEventHandler<HTMLButtonElement>
 }
 
 
-function MainBody({height, btnGameStartOnClick} : bodyProps) {
+export interface ITop10Users {
+    key: number,
+    id: number,
+    nickname: string,
+    message: string,
+    record: number,
+}
+
+function MainBody({ height, btnGameStartOnClick }: IProps) {
+    const [top10Users, setTop10Users] = useState<ITop10Users[]>([])
+
+    useEffect(() => {
+        async function FetchTop10Users() {
+            const result = await axios(
+                'http://116.123.85.116:9999/click/query?rank=5'
+            )
+
+            console.log(result.data);
+
+            setTop10Users(result.data)
+        }
+        FetchTop10Users()
+
+        return function CleanUp() {
+
+        }
+    }, [])
+
     return (
         <Wrapper height={height}>
-            <ButtonBigRounded name="Game Start" onClick={btnGameStartOnClick}/>
+            <div className="user-rank">
+                <Paper>
+                    <Table>
+                        <TableHead>
+                            <TableRow>
+                                <TableCell>Rank</TableCell>
+                                <TableCell>Nickname</TableCell>
+                                <TableCell>Message</TableCell>
+                                <TableCell>Record</TableCell>
+                            </TableRow>
+                        </TableHead>
+                        <TableBody>
+                            {top10Users.map((user: ITop10Users, index: number) => {
+                                return (
+                                    <User
+                                        key={user.id}
+                                        id={index + 1}
+                                        nickname={user.nickname}
+                                        message={user.message}
+                                        record={user.record} />
+                                )
+                            })}
+                        </TableBody>
+                    </Table>
+                </Paper>
+            </div>
+            <div className="btn-game-start">
+                <Button variant="contained" style={{ backgroundColor: "green" }} onClick={btnGameStartOnClick}>
+                    Game Start
+                </Button>
+            </div>
         </Wrapper>
     )
 }

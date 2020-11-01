@@ -11,4 +11,9 @@ export const Wrapper = styled.div`
     position : relative;
     height: ${(props:IProps) => props.height};
     font-family: '나눔바른고딕','Nanum Barun Gothic','Noto Sans KR','Malgun Gothic';
+
+    & > div.btn-game-start {
+        display : flex;
+        justify-content : center;
+    }
 `;
