@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.js": "/who-is-faster/static/js/main.8dd1e115.chunk.js",
-    "main.js.map": "/who-is-faster/static/js/main.8dd1e115.chunk.js.map",
+    "main.js": "/who-is-faster/static/js/main.7b9ad622.chunk.js",
+    "main.js.map": "/who-is-faster/static/js/main.7b9ad622.chunk.js.map",
     "runtime-main.js": "/who-is-faster/static/js/runtime-main.461e6751.js",
     "runtime-main.js.map": "/who-is-faster/static/js/runtime-main.461e6751.js.map",
     "static/js/2.ffb3340a.chunk.js": "/who-is-faster/static/js/2.ffb3340a.chunk.js",
     "static/js/2.ffb3340a.chunk.js.map": "/who-is-faster/static/js/2.ffb3340a.chunk.js.map",
     "index.html": "/who-is-faster/index.html",
-    "precache-manifest.1846657cf21752e46733a9f2c26373a7.js": "/who-is-faster/precache-manifest.1846657cf21752e46733a9f2c26373a7.js",
+    "precache-manifest.6341de63d71ca519c46f3e1192270e02.js": "/who-is-faster/precache-manifest.6341de63d71ca519c46f3e1192270e02.js",
     "service-worker.js": "/who-is-faster/service-worker.js",
     "static/js/2.ffb3340a.chunk.js.LICENSE.txt": "/who-is-faster/static/js/2.ffb3340a.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.461e6751.js",
     "static/js/2.ffb3340a.chunk.js",
-    "static/js/main.8dd1e115.chunk.js"
+    "static/js/main.7b9ad622.chunk.js"
   ]
 }
