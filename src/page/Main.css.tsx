@@ -30,8 +30,11 @@ export const Wrapper = styled.div`
         display : table-cell;
     }
 
-    & .script-box {
-        will-change: width, height, left, top;
-        position: absolute;
+    & > div.form {
+        display : flex;
+        width : 100%;
+        height : 100%;
+        justify-content : center;
+        align-items : center;
     }
 `;

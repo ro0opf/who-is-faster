@@ -11,9 +11,19 @@ export const Wrapper = styled.div`
     position : relative;
     height: ${(props:IProps) => props.height};
     font-family: '나눔바른고딕','Nanum Barun Gothic','Noto Sans KR','Malgun Gothic';
+    display : flex;
+    flex-direction : column;
+    align-items : center;
+    & > div.user-rank {
+        flex : 0;
+        width : 80%;
+    }
 
     & > div.btn-game-start {
         display : flex;
+        width : 100%;
+        flex : 1;
         justify-content : center;
+        align-items : center;
     }
 `;

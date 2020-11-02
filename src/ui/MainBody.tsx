@@ -24,7 +24,7 @@ function MainBody({ height, btnGameStartOnClick }: IProps) {
     useEffect(() => {
         async function FetchTop10Users() {
             const result = await axios(
-                'http://116.123.85.116:9999/click/query?rank=5'
+                'http://116.123.85.116:9999/click/query?rank=10'
             )
 
             console.log(result.data);
@@ -48,7 +48,7 @@ function MainBody({ height, btnGameStartOnClick }: IProps) {
                                 <TableCell>Rank</TableCell>
                                 <TableCell>Nickname</TableCell>
                                 <TableCell>Message</TableCell>
-                                <TableCell>Record</TableCell>
+                                <TableCell>Record(second)</TableCell>
                             </TableRow>
                         </TableHead>
                         <TableBody>
@@ -59,7 +59,7 @@ function MainBody({ height, btnGameStartOnClick }: IProps) {
                                         id={index + 1}
                                         nickname={user.nickname}
                                         message={user.message}
-                                        record={user.record} />
+                                        record={user.record / 1000} />
                                 )
                             })}
                         </TableBody>
@@ -67,7 +67,7 @@ function MainBody({ height, btnGameStartOnClick }: IProps) {
                 </Paper>
             </div>
             <div className="btn-game-start">
-                <Button variant="contained" style={{ backgroundColor: "green" }} onClick={btnGameStartOnClick}>
+                <Button variant="contained" style={{ width : "70%", height : "30%", fontSize : "30px",  backgroundColor: "green" }} onClick={btnGameStartOnClick}>
                     Game Start
                 </Button>
             </div>

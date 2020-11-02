@@ -20,7 +20,6 @@ function Main() {
     const [score, setScore] = useState<number>(0)
     const [nickname, setNickname] = useState<string>('')
     const [message, setMessage] = useState<string>('')
-    const [ip, setIp] = useState<string>('')
 
     function BtnGameStartOnClick() {
         setGameState(READY_TO_START)
@@ -82,38 +81,19 @@ function Main() {
         setGameState(END_GAME)
     }
 
-    async function btnSaveGameResult() {
-        const getIp = async () => {
-            let ipData = await axios.get('https://api.ipify.org/?format=json')
-            setIp(ipData.data.ip)
-        }
+    function btnSaveGameResult() {
+        axios.get('https://api.ipify.org/?format=json')
+            .then((res) => {
+                const postData = { 'message': message, 'nickname': nickname, 'record': score, 'ip': res.data.ip }
 
-        const result = () => {
-            return new Promise((resolve) => {
-                getIp()
+                axios.post('http://116.123.85.116:9999/click/save_rank', null, { params : postData }).then((res) => {
+                    setGameState(BEFORE_START)
+                    setRed('0')
+                    setBlue('0')
+                    setGreen('0')
+                    setAlpha('0.95')
+                })
             })
-        }
-
-        result().then(() => {
-            let postData = { 'message': message, 'nickname': nickname, 'record': score, 'ip': ip }
-            console.log(postData);
-        })
-
-
-        // ipData.then(()=>{
-        //     console.log(123123);
-
-        // });
-
-        // let res = await axios.post('http://116.123.85.116:9999/click/save_rank', { postData });
-
-        // console.log(`Status code: ${res.status}`);
-        // console.log(`Status text: ${res.statusText}`);
-        // console.log(`Request method: ${res.request.method}`);
-        // console.log(`Path: ${res.request.path}`);
-
-        // console.log(`Date: ${res.headers.date}`);
-        // console.log(`Data: ${res.data}`);
     }
 
     switch (gameState) {
@@ -138,13 +118,13 @@ function Main() {
         case END_GAME:
             return (
                 <Wrapper red={'0'} green={'0'} blue={'0'} alpha={'0.05'}>
-                    <div>
-                        <form className="adwadaw" noValidate autoComplete="off">
+                    <div className="form">
+                        <form noValidate autoComplete="off">
                             <TextField style={{ width: "50%" }} id="outlined-basic" label="Nickname" variant="outlined" onChange={(e) => setNickname(e.target.value)} />
                             <TextField id="outlined-basic" label="Message" variant="outlined" onChange={(e) => setMessage(e.target.value)} />
                         </form>
                         <Button variant="contained" style={{ backgroundColor: "green" }} onClick={btnSaveGameResult}>
-                            Game Start
+                            SAVE
                         </Button>
                     </div>
                     <div>
