@@ -7,7 +7,7 @@ function App() {
   return (
     <Wrapper>
         <Switch>
-          <Route exact path="/" component={Main} />
+          <Route exact path="/who-is-faster/" component={Main} />
         </Switch>
     </Wrapper>
   );
