@@ -81,19 +81,18 @@ function Main() {
         setGameState(END_GAME)
     }
 
-    function btnSaveGameResult() {
-        axios.get('https://api.ipify.org/?format=json')
-            .then((res) => {
-                const postData = { 'message': message, 'nickname': nickname, 'record': score, 'ip': res.data.ip }
+    async function btnSaveGameResult() {
+        const response = await axios.get('https://api.ipify.org/?format=json')
+        const postData = { 'message': message, 'nickname': nickname, 'record': score, 'ip': response.data.ip }
+        console.log(postData)
+        
+        const responseSave = await axios.post('http://116.123.85.116:9999/click/save_rank', null, { params : postData })
 
-                axios.post('http://116.123.85.116:9999/click/save_rank', null, { params : postData }).then((res) => {
-                    setGameState(BEFORE_START)
-                    setRed('0')
-                    setBlue('0')
-                    setGreen('0')
-                    setAlpha('0.95')
-                })
-            })
+        setGameState(BEFORE_START)
+        setRed('0')
+        setBlue('0')
+        setGreen('0')
+        setAlpha('0.95')
     }
 
     switch (gameState) {
