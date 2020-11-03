@@ -14,9 +14,12 @@ export const Wrapper = styled.div`
     display : flex;
     flex-direction : column;
     align-items : center;
+
     & > div.user-rank {
+        display : flex;
+        justify-content : center;
         flex : 0;
-        width : 80%;
+        width : 100%;
     }
 
     & > div.btn-game-start {

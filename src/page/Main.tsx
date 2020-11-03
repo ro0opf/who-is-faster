@@ -86,7 +86,7 @@ function Main() {
         const postData = { 'message': message, 'nickname': nickname, 'record': score, 'ip': response.data.ip }
         console.log(postData)
         
-        const responseSave = await axios.post('http://116.123.85.116:9999/click/save_rank', null, { params : postData })
+        await axios.post('http://116.123.85.116:9999/click/save_rank', null, { params : postData })
 
         setGameState(BEFORE_START)
         setRed('0')
@@ -118,16 +118,11 @@ function Main() {
             return (
                 <Wrapper red={'0'} green={'0'} blue={'0'} alpha={'0.05'}>
                     <div className="form">
-                        <form noValidate autoComplete="off">
-                            <TextField style={{ width: "50%" }} id="outlined-basic" label="Nickname" variant="outlined" onChange={(e) => setNickname(e.target.value)} />
-                            <TextField id="outlined-basic" label="Message" variant="outlined" onChange={(e) => setMessage(e.target.value)} />
-                        </form>
+                        <TextField style={{ width: "50%" }} id="outlined-basic" label="Nickname" variant="outlined" onChange={(e) => setNickname(e.target.value)} />
+                        <TextField id="outlined-basic" label="Message" variant="outlined" onChange={(e) => setMessage(e.target.value)} />
                         <Button variant="contained" style={{ backgroundColor: "green" }} onClick={btnSaveGameResult}>
                             SAVE
                         </Button>
-                    </div>
-                    <div>
-                        {score}
                     </div>
                 </Wrapper>
             )

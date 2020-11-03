@@ -32,8 +32,9 @@ export const Wrapper = styled.div`
 
     & > div.form {
         display : flex;
+        flex-direction : column;
         width : 100%;
-        height : 100%;
+        padding-top : 50px;
         justify-content : center;
         align-items : center;
     }

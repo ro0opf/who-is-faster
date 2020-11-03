@@ -18,6 +18,6 @@ export const Wrapper = styled.div`
         top: 50%;
         color : white;
         text-align : center;
-        font-size : 60px;
+        font-size : 32px;
     }
 `;
