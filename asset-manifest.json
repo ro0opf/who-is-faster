@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.js": "/who-is-faster/static/js/main.e460059e.chunk.js",
-    "main.js.map": "/who-is-faster/static/js/main.e460059e.chunk.js.map",
+    "main.js": "/who-is-faster/static/js/main.b996457b.chunk.js",
+    "main.js.map": "/who-is-faster/static/js/main.b996457b.chunk.js.map",
     "runtime-main.js": "/who-is-faster/static/js/runtime-main.461e6751.js",
     "runtime-main.js.map": "/who-is-faster/static/js/runtime-main.461e6751.js.map",
-    "static/js/2.ffb3340a.chunk.js": "/who-is-faster/static/js/2.ffb3340a.chunk.js",
-    "static/js/2.ffb3340a.chunk.js.map": "/who-is-faster/static/js/2.ffb3340a.chunk.js.map",
+    "static/js/2.0af1f56b.chunk.js": "/who-is-faster/static/js/2.0af1f56b.chunk.js",
+    "static/js/2.0af1f56b.chunk.js.map": "/who-is-faster/static/js/2.0af1f56b.chunk.js.map",
     "index.html": "/who-is-faster/index.html",
-    "precache-manifest.62d9e929ff0c4f89113852d4990c4e71.js": "/who-is-faster/precache-manifest.62d9e929ff0c4f89113852d4990c4e71.js",
+    "precache-manifest.08c3ee5c0f5c9674a5f6b9d249752df6.js": "/who-is-faster/precache-manifest.08c3ee5c0f5c9674a5f6b9d249752df6.js",
     "service-worker.js": "/who-is-faster/service-worker.js",
-    "static/js/2.ffb3340a.chunk.js.LICENSE.txt": "/who-is-faster/static/js/2.ffb3340a.chunk.js.LICENSE.txt"
+    "static/js/2.0af1f56b.chunk.js.LICENSE.txt": "/who-is-faster/static/js/2.0af1f56b.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.461e6751.js",
-    "static/js/2.ffb3340a.chunk.js",
-    "static/js/main.e460059e.chunk.js"
+    "static/js/2.0af1f56b.chunk.js",
+    "static/js/main.b996457b.chunk.js"
   ]
 }
