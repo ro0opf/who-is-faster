@@ -24,7 +24,7 @@ function MainBody({ height, btnGameStartOnClick }: IProps) {
     useEffect(() => {
         async function FetchTop10Users() {
             const result = await axios(
-                'http://116.123.85.116:9999/click/query?rank=5'
+                'https://116.123.85.116:9999/click/query?rank=5'
             )
 
             console.log(result.data);

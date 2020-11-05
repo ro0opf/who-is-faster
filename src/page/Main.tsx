@@ -86,7 +86,7 @@ function Main() {
         const postData = { 'message': message, 'nickname': nickname, 'record': score, 'ip': response.data.ip }
         console.log(postData)
         
-        await axios.post('http://116.123.85.116:9999/click/save_rank', null, { params : postData })
+        await axios.post('https://116.123.85.116:9999/click/save_rank', null, { params : postData })
 
         setGameState(BEFORE_START)
         setRed('0')
