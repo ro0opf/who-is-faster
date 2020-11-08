@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.js": "/static/js/main.3c3ef27f.chunk.js",
-    "main.js.map": "/static/js/main.3c3ef27f.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.03a5f2a3.js",
-    "runtime-main.js.map": "/static/js/runtime-main.03a5f2a3.js.map",
-    "static/js/2.0ef2f03e.chunk.js": "/static/js/2.0ef2f03e.chunk.js",
-    "static/js/2.0ef2f03e.chunk.js.map": "/static/js/2.0ef2f03e.chunk.js.map",
-    "index.html": "/index.html",
-    "precache-manifest.a36699fd65dc70c94f17c687e6af20b5.js": "/precache-manifest.a36699fd65dc70c94f17c687e6af20b5.js",
-    "service-worker.js": "/service-worker.js",
-    "static/js/2.0ef2f03e.chunk.js.LICENSE.txt": "/static/js/2.0ef2f03e.chunk.js.LICENSE.txt"
+    "main.js": "/who-is-faster/static/js/main.4ac89f97.chunk.js",
+    "main.js.map": "/who-is-faster/static/js/main.4ac89f97.chunk.js.map",
+    "runtime-main.js": "/who-is-faster/static/js/runtime-main.461e6751.js",
+    "runtime-main.js.map": "/who-is-faster/static/js/runtime-main.461e6751.js.map",
+    "static/js/2.0af1f56b.chunk.js": "/who-is-faster/static/js/2.0af1f56b.chunk.js",
+    "static/js/2.0af1f56b.chunk.js.map": "/who-is-faster/static/js/2.0af1f56b.chunk.js.map",
+    "index.html": "/who-is-faster/index.html",
+    "precache-manifest.9c32618aefd20d61d6ed89dda67c30d6.js": "/who-is-faster/precache-manifest.9c32618aefd20d61d6ed89dda67c30d6.js",
+    "service-worker.js": "/who-is-faster/service-worker.js",
+    "static/js/2.0af1f56b.chunk.js.LICENSE.txt": "/who-is-faster/static/js/2.0af1f56b.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.03a5f2a3.js",
-    "static/js/2.0ef2f03e.chunk.js",
-    "static/js/main.3c3ef27f.chunk.js"
+    "static/js/runtime-main.461e6751.js",
+    "static/js/2.0af1f56b.chunk.js",
+    "static/js/main.4ac89f97.chunk.js"
   ]
 }
