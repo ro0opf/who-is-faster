@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/who-is-faster/precache-manifest.9b783bbfde54ddd2b970459e69d63dfc.js"
+  "/who-is-faster/precache-manifest.acdebad268bb580e10c6a98a9e7fc1f7.js"
 );
 
 self.addEventListener('message', (event) => {
