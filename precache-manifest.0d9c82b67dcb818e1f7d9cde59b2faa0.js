@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "a36c8e385764c85311486893b332ed5a",
+    "revision": "584e901c7554f4e6910ea745a27330f1",
     "url": "/who-is-faster/index.html"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/who-is-faster/static/js/2.0af1f56b.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "7e133de613ad24c8e219",
-    "url": "/who-is-faster/static/js/main.4ac89f97.chunk.js"
+    "revision": "bf2a284b599601d2d3b7",
+    "url": "/who-is-faster/static/js/main.f6dcfc91.chunk.js"
   },
   {
     "revision": "7e5f3de24d29cd5d5fc4",
